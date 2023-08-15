@@ -1,0 +1,99 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+/*body*/
+body {
+    font-family: 'Roboto', sans-serif;
+    max-width: 100%;
+}
+
+
+.card-product img {
+    width: 100px;
+}
+
+.logop img{
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 550px;
+}
+
+.ingreso {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ingreso input{
+    width: 50px;
+    height: 50px;
+}
+
+.ingreso label{
+    margin-bottom:15px;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.boton{
+    background-color: rgba(0, 0, 0, 0.349);
+    color: black;
+    border: solid 0.5px gold;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+.cerves{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+h2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+}
+
+.cervezas .cerves .card-product .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.cervezas .cerves .card-product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    border: solid gold;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.cervezas .cerves .card-product .card-body button{
+    background-color: rgba(0, 0, 0, 0.349);
+    color: black;
+    border: solid 0.5px gold;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+
+}
