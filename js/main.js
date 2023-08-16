@@ -5,10 +5,15 @@ function edadMay(event){
     let edad = document.getElementById("edad").value;
     let age = parseInt(edad);
     if (edad >= 18){
-        alert("BIENVENIDO SELECCIONA LA CERVEZA DE TU GUSTO")
-        console.log("su edad es: ", age," BIENVENIDO SELECCIONA LA CERVEZA DE TU GUSTO");
+        Swal.fire('BIENVENIDO SELECCIONA LA CERVEZA DE TU GUSTO')
+        //alert("BIENVENIDO SELECCIONA LA CERVEZA DE TU GUSTO")
+       // console.log("su edad es: ", age," BIENVENIDO SELECCIONA LA CERVEZA DE TU GUSTO");
     }else{
-        alert("Sos menor de edad NO! podes comprar");
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Sos menor de edad NO! podes comprar',
+        })
         return
     }
 }  
@@ -47,6 +52,26 @@ productsList.addEventListener("click", e => {
     let totalCompra=0
     let precio=0
     let cantidadTotal=0
+
+    let carritob=document.getElementById("botoncarritox")
+    carritob.addEventListener("click", beerCarrito)
+
+    function beerCarrito(){
+        const carritoJSON=JSON.stringify(clientList)
+        sessionStorage.setItem("carritodata",carritoJSON)
+        carritoguard ()
+    }
+
+    function carritoguard (){
+        const elementCarrito=document.getElementById("carritox")
+        elementCarrito.innerHTML="";
+
+        clientList.forEach((item)=>{
+            const listItem=document.createElement("li")
+            listItem.textContent=`Cantidad:${item.cant} - Sabor:${item.sabor} - Presentacion:${item.present} - Precio:${item.precio} Compra Total:${totalCompra}`
+            elementCarrito.appendChild(listItem)
+        })
+    }
         
 
 

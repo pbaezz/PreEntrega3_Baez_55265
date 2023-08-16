@@ -9,6 +9,25 @@ body {
     max-width: 100%;
 }
 
+.botoncarrito{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+.botoncarrito button {
+    background-color: rgba(0, 0, 0, 0.349);
+    color: black;
+    border: solid 0.5px gold;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
 
 .card-product img {
     width: 100px;
@@ -57,7 +76,7 @@ body {
     justify-items: center;
 }
 
-h2{
+h1{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -95,5 +114,18 @@ h2{
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
+
+}
+
+#carritox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    list-style: none;
 
 }
